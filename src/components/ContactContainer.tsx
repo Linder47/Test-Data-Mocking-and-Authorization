@@ -4,22 +4,38 @@ import { IContact } from '../models/IContact';
 import ContactItem from './ContactItem';
 
 const ContactContainer: React.FC = () => {
-    const {
-        data: contacts,
-        isLoading,
-        error
-    } = contactAPI.useFetchAllContactsQuery(10)
-
     const [search, setSearch] = useState('');
+
+    let {
+        data: contacts = [],
+        error,
+        isLoading: loading
+    } = contactAPI.useFetchAllContactsQuery(50);
+
+
+    // let {
+    //     data,
+    //     error,
+    //     isLoading
+    // } = contactAPI.useSearchContactQuery(search);
 
     const [deleteContact, { }] = contactAPI.useDeleteContactMutation()
     const [updateContact, { }] = contactAPI.useUpdateContactMutation()
     const [addContact, { }] = contactAPI.useAddContactMutation()
-    // const [searchContact, {}] = contactAPI.useSearchContactMutation()
+
+    // const [searchContact, { }] = contactAPI.useSearchContactMutation()
+
+    // let {
+    //     data: contacts,
+    //     isLoading,
+    //     error
+    // } = contactAPI.useSearchContactQuery(search);
+
+
     console.log(contacts);
     console.log(search);
 
-    if (isLoading) {
+    if (loading) {
         <div >Идет загрузка контактов...</div>
     }
 
@@ -37,18 +53,22 @@ const ContactContainer: React.FC = () => {
         updateContact(contact)
     }
 
-    const handleSearch = () => {
-        searchContact(search)
+    const handleSearch = (event: React.FormEvent<HTMLFormElement>) => { //NOT DONE YET!!!
+    // 
+        event.preventDefault();
+    //     console.log(search);
+    //     console.log(contacts);
+    //     // searchContact(search);
     }
 
-    // const handleCreate = async () => {
-    //     const name = prompt()
-    //     await addContact({name, body: name} as IContact)
-    // }
+    const handleCreate = async () => {
+        const name = prompt('Name')
+        await addContact({ name } as unknown as IContact)
+    }
 
     return (
         <div>
-            {/* <button onClick={handleCreate}>Добавить контакт</button> */}
+            <button onClick={handleCreate}>Добавить контакт</button>
             <form onSubmit={handleSearch}>
                 <label>Поиск</label>
                 <input type="text" value={search} onChange={(e) => setSearch(e.target.value)}></input>
