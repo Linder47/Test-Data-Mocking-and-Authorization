@@ -4,7 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-.db.json
+/.db.json
+/.gitignore
 
 # testing
 /coverage

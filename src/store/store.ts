@@ -1,9 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 // import userReducer from './reducers/UserSlice'
 import { contactAPI } from "../services/contactService";
+import userReducer from './userSlice';
 
 const rootReducer = combineReducers({
-    // userReducer,
+    userReducer,
     [contactAPI.reducerPath]: contactAPI.reducer
 })
 
