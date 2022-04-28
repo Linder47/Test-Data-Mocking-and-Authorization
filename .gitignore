@@ -6,13 +6,16 @@
 .pnp.js
 /.db.json
 /.gitignore
+.gitignore
 .env*.local
+.env*
+.env
 ../authorization-keys.ts
 ../../authorization-keys.ts
-----webpack.client.js
-----webpack.config.js
-----webpack.server.js
-src/authorization-keys.ts
+/----webpack.client.js
+/----webpack.config.js
+/----webpack.server.js
+/src/authorization-keys.ts
 
 # testing
 /coverage
