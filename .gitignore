@@ -6,6 +6,9 @@
 .pnp.js
 /.db.json
 /.gitignore
+.env*.local
+../authorization-keys.ts
+../../authorization-keys.ts
 
 # testing
 /coverage

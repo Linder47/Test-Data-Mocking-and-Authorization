@@ -4,6 +4,7 @@ import  Form from './Form';
 import { setUser } from '../store/userSlice';
 import { useAppDispatch } from '../hooks/redux';
 import '../firebase'
+import * as firebase from "firebase/app";
 
 const SignUp = () => {
     const dispatch = useAppDispatch();
