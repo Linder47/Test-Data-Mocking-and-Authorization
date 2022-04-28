@@ -9,6 +9,10 @@
 .env*.local
 ../authorization-keys.ts
 ../../authorization-keys.ts
+----webpack.client.js
+----webpack.config.js
+----webpack.server.js
+src/authorization-keys.ts
 
 # testing
 /coverage
