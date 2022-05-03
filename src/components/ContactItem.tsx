@@ -8,7 +8,6 @@ interface ContactItemProps {
 }
 
 const ContactItem: FC<ContactItemProps> = ({ contact, remove, update }) => {
-
     const handleRemove = (event: React.MouseEvent) => {
         event.stopPropagation();
         remove(contact);

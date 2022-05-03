@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import * as firebase from "firebase/app";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import  Form  from './Form';
 import { setUser } from '../store/userSlice';
