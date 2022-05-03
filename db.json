@@ -41,11 +41,6 @@
       "name": "Clementina DuBuque"
     },
     {
-      "name": "Пук",
-      "body": "Пук",
-      "id": 11
-    },
-    {
       "name": "Joesphine ",
       "body": "Joesphine ",
       "id": 12
@@ -55,11 +50,11 @@
       "id": 13
     },
     {
-      "name": "56",
+      "name": null,
       "id": 14
     },
     {
-      "name": "5789",
+      "name": null,
       "id": 15
     }
   ]
