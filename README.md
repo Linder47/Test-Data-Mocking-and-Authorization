@@ -1,6 +1,8 @@
 
 ## Test app
 
+GH Pages: https://linder47.github.io/Test-Data-Mocking-and-Authorization/
+
 ТЗ для frontnend разработчика
 - Напишите приложение личного кабинета
 - В приложении должно быть две страницы - страница входа и страница со списком контактов.

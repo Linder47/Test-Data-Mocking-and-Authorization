@@ -11,7 +11,7 @@ const App: React.FC = () => {
 
     <div className="App">
 
-      <BrowserRouter>
+      <BrowserRouter basename="Test-Data-Mocking-and-Authorization/">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
