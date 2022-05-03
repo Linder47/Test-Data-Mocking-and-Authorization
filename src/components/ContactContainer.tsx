@@ -2,43 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { contactAPI } from '../services/contactService';
 import { IContact } from '../models/IContact';
 import ContactItem from './ContactItem';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
+import './Style.css';
 
 const ContactContainer: React.FC = () => {
-    const [search, setSearch] = useState('');
-
     let {
-        data: allContacts = [],
+        data: contacts = [],
         error,
         isLoading: loading
     } = contactAPI.useFetchAllContactsQuery(50);
 
-    const [contacts, setContacts] = useState(allContacts);
-
     const [deleteContact, { }] = contactAPI.useDeleteContactMutation()
     const [updateContact, { }] = contactAPI.useUpdateContactMutation()
     const [addContact, { }] = contactAPI.useAddContactMutation()
-
-    console.log(contacts);
-    console.log(search);
 
     const handleRemove = (contact: IContact) => {
         deleteContact(contact)
     }
 
     const handleUpdate = (contact: IContact) => {
-        updateContact(contact)
-    }
-
-    const handleSearch = (event: React.FormEvent<HTMLFormElement>) => { //NOT DONE YET!!! event: React.FormEvent<HTMLFormElement>
-        event.preventDefault();
-        setContacts(allContacts.filter((contact) => {
-            return contact.name.toLowerCase().includes(search)
-        }))
-    }
-
-    const handleClearSearch = () => {
-        setSearch('');
-        setContacts(allContacts);
+        contact.name.length !== 0 && updateContact(contact)
     }
 
     const handleCreate = async () => {
@@ -47,24 +31,27 @@ const ContactContainer: React.FC = () => {
     }
 
     if (loading) {
-        <div >Идет загрузка контактов...</div>
+        <div >Loading contacts...</div>
     }
 
     if (error) {
-        <div>Контакты не загрузились.</div>
+        <div>Sorry, we couldn't load your contact list :C</div>
     }
 
     return (
         <div>
-            <button onClick={handleCreate}>Добавить контакт</button>
-            <form onSubmit={handleSearch}>
-                <label>Поиск</label>
-                <input type="text" value={search} onChange={(e) => setSearch(e.target.value.toLowerCase())}></input>
-            </form>
-            <button onClick={handleClearSearch}>Очистить поиск</button>
-            {contacts && contacts.map(cont =>
-                <ContactItem key={cont.id} contact={cont} remove={handleRemove} update={handleUpdate} />
-            )}
+            <div className='contacts--filter'>
+                <div className='contacts--filter__create'> <Button onClick={handleCreate}>Add a contact</Button></div>
+            <p><i>Click on to the contact to update it.</i></p>
+            </div>
+
+            <div className='contacts--container'>
+            <ListGroup>
+                {contacts && contacts.map(cont =>
+                    <ContactItem key={cont.id} contact={cont} remove={handleRemove} update={handleUpdate} />
+                )}
+                </ListGroup>
+            </div>
         </div>
     )
 }

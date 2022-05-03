@@ -1,9 +1,10 @@
 import SignUp  from '../components/SignUp';
 import { Link } from 'react-router-dom';
-console.log(process.env);
+import './Login.css';
+
 const RegisterPage = () => {
     return (
-        <div>
+        <div className='login'>
             <h1>Register</h1>
             <SignUp />
             <p>

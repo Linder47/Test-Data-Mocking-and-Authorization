@@ -1,0 +1,80 @@
+.register-form {
+  max-width: 350px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.contacts--filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+}
+
+.contacts--filter p {
+  margin-top: 20px;
+}
+
+.contacts--filter__search {
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row-reverse
+}
+
+.contact p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.list-group {
+  display: flex;
+  width: 60vw;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.contacts--container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-primary {
+  background-color: #5c677d;
+  border-color: #5c677d;
+}
+
+.btn-primary:disabled {
+  background-color: #979dac;
+  border-color: #979dac;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: #001233;
+  border-color: #001233;
+}
+
+.btn-dark {
+  background-color: #190B28;
+}
+
+.btn-light {
+  margin-right: 20px;
+}
+
+.list-group-item:hover {
+  cursor: pointer;
+}

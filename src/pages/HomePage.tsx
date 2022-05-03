@@ -1,8 +1,9 @@
-import {Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useAuth } from '../hooks/use-auth';
 import { removeUser } from '../store/userSlice'
 import { useAppDispatch } from '../hooks/redux';
 import ContactContainer from '../components/ContactContainer';
+import Button from 'react-bootstrap/Button';
 
 const HomePage = () => {
     const dispatch = useAppDispatch();
@@ -11,13 +12,15 @@ const HomePage = () => {
 
     return isAuth ? (
         <div>
-            <h1>Welcome</h1>
+            <div className='header'>
+                <h1>Welcome!</h1>
 
-            <button
-                onClick={() => dispatch(removeUser())}
-            >Log out from {email}</button>
+                <Button variant="dark"
+                    onClick={() => dispatch(removeUser())}
+                >Log out from {email}</Button>
+            </div>
 
-            <ContactContainer/>
+            <ContactContainer />
         </div>
     ) : (
         <Navigate replace to="/login" />

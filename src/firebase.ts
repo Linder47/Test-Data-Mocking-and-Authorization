@@ -12,9 +12,6 @@ const firebaseConfig = {
   appId: autho.REACT_APP_PRJECT_ID
 };
 
-console.log('process.env  ');
-console.log(process.env);
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export default app;

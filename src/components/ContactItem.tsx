@@ -1,5 +1,8 @@
 import React, { FC } from "react";
 import { IContact } from "../models/IContact";
+import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
+import './Style.css';
 
 interface ContactItemProps {
     contact: IContact;
@@ -19,13 +22,15 @@ const ContactItem: FC<ContactItemProps> = ({ contact, remove, update }) => {
     }
 
     return (
-        <div className="contact" onClick={handleUpdate}>
-            <p>{contact.id} Name: {contact.name}</p>
+        <ListGroup.Item>
+        <div className="contact container-fluid" onClick={handleUpdate}>
+            <p>{contact.name}</p>
 
-            <button onClick={handleRemove} >DELETE {contact.name}</button>
+            <Button variant="light" onClick={handleRemove} >DELETE</Button>
             <p></p>
             <p></p>
         </div>
+        </ListGroup.Item>
     )
 }
 

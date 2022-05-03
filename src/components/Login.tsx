@@ -4,9 +4,6 @@ import  Form  from './Form';
 import { setUser } from '../store/userSlice';
 import { useAppDispatch } from '../hooks/redux';
 import '../firebase'
-import firebaseApp from '../firebase';
-
-console.log(firebaseApp);
 
 const Login = () => {
     const dispatch = useAppDispatch();
@@ -16,7 +13,6 @@ const Login = () => {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
             .then(({ user }) => {
-                console.log(user);
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,

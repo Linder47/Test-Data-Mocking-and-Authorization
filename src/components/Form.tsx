@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import './Form.css';
+import './Style.css';
 
 interface FormProps {
     title: string;

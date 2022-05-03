@@ -1,10 +1,10 @@
 import Login  from '../components/Login';
 import { Link } from 'react-router-dom';
+import './Login.css';
 
-console.log(process.env);
 const LoginPage = () => {
     return (
-        <div>
+        <div className='login'>
             <h1>Login</h1>
             <Login />
             <p>
