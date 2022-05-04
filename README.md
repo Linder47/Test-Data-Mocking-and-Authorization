@@ -3,7 +3,7 @@
 
 GH Pages: https://linder47.github.io/Test-Data-Mocking-and-Authorization/
 
-ТЗ для frontnend разработчика
+ТЗ для frontend разработчика
 - Напишите приложение личного кабинета
 - В приложении должно быть две страницы - страница входа и страница со списком контактов.
 - Для реализации авторизации можно использовать запросы с моковыми данными. https://github.com/typicode/json-server

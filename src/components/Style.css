@@ -78,3 +78,17 @@
 .list-group-item:hover {
   cursor: pointer;
 }
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background: linear-gradient(#eef3ec, #efffce, #eef3ec);
+    flex-direction: column;
+    height: 100vh;
+    width: 100vh;
+}
+
+.not-found h4 {
+  font-size: 120px;
+}
