@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Linder47/Test-Data-Mocking-and-Authorization.git/static/css/main.a306fce8.css",
-    "main.js": "/Linder47/Test-Data-Mocking-and-Authorization.git/static/js/main.c09bbaf7.js",
-    "index.html": "/Linder47/Test-Data-Mocking-and-Authorization.git/index.html",
-    "main.a306fce8.css.map": "/Linder47/Test-Data-Mocking-and-Authorization.git/static/css/main.a306fce8.css.map",
-    "main.c09bbaf7.js.map": "/Linder47/Test-Data-Mocking-and-Authorization.git/static/js/main.c09bbaf7.js.map"
+    "main.css": "/Test-Data-Mocking-and-Authorization/static/css/main.a306fce8.css",
+    "main.js": "/Test-Data-Mocking-and-Authorization/static/js/main.c09bbaf7.js",
+    "index.html": "/Test-Data-Mocking-and-Authorization/index.html",
+    "main.a306fce8.css.map": "/Test-Data-Mocking-and-Authorization/static/css/main.a306fce8.css.map",
+    "main.c09bbaf7.js.map": "/Test-Data-Mocking-and-Authorization/static/js/main.c09bbaf7.js.map"
   },
   "entrypoints": [
     "static/css/main.a306fce8.css",
